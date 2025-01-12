@@ -56,8 +56,8 @@ FROM frankenphp_base AS frankenphp_dev
 
 ENV APP_ENV=dev XDEBUG_MODE=off
 
-RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
-RUN ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ""
+RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini" && \
+	ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ""
 
 RUN set -eux; \
 	install-php-extensions \
