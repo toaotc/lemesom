@@ -22,7 +22,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	file \
 	gettext \
 	git \
-	openssh-client \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN set -eux; \
@@ -56,8 +55,7 @@ FROM frankenphp_base AS frankenphp_dev
 
 ENV APP_ENV=dev XDEBUG_MODE=off
 
-RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini" && \
-	ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ""
+RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 
 RUN set -eux; \
 	install-php-extensions \
