@@ -1,0 +1,22 @@
+import:
+  - recipe/symfony.php
+
+config:
+  repository: 'https://github.com/toaotc/lemesom.git'
+
+hosts:
+  hadar.uberspace.de:
+    http_user: toaotc
+    remote_user: toaotc
+    deploy_path: '/var/www/virtual/toaotc/lemesom'
+
+tasks:
+  build:
+    - run: uptime
+  deploy:assets:compile:
+    - run: '{{bin/console}} tailwind:build --minify'
+    - run: '{{bin/console}} asset-map:compile'
+
+after:
+  deploy:failed: deploy:unlock
+  deploy:cache:clear: deploy:assets:compile
