@@ -10,7 +10,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "runtime/frankenphp-symfony": "^0.2.0",
-        "symfony/apache-pack": "^1.0",
+        "symfony/apache-pack": "^1.0.1",
         "symfony/asset": "7.2.*",
         "symfony/asset-mapper": "7.2.*",
         "symfony/console": "7.2.*",
@@ -22,8 +22,8 @@
         "symfony/twig-bundle": "7.2.*",
         "symfony/yaml": "7.2.*",
         "symfonycasts/tailwind-bundle": "^0.6.1",
-        "twig/extra-bundle": "^2.12|^3.18",
-        "twig/twig": "^2.12|^3.18"
+        "twig/extra-bundle": "^2.12|^3.20",
+        "twig/twig": "^2.12|^3.20"
     },
     "config": {
         "allow-plugins": {
@@ -78,9 +78,9 @@
         }
     },
     "require-dev": {
-        "deployer/deployer": "^7.5.8",
+        "deployer/deployer": "^7.5.12",
         "symfony/debug-bundle": "7.2.*",
-        "symfony/maker-bundle": "^1.61",
+        "symfony/maker-bundle": "^1.62.1",
         "symfony/stopwatch": "7.2.*",
         "symfony/web-profiler-bundle": "7.2.*"
     }
