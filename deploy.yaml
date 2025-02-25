@@ -13,13 +13,14 @@ hosts:
 tasks:
   build:
     - run: uptime
-  deploy:assets:compile:
-    - run: '{{bin/console}} tailwind:build --minify'
-    - run: '{{bin/console}} asset-map:compile'
+  deploy:upload:build:
+    - upload:
+        src: 'public/build/'
+        dest: '{{release_path}}/public/build/'
   deploy:success:restart:php:
       - run: 'uberspace tools restart php'
 
 after:
   deploy:failed: deploy:unlock
-  deploy:cache:clear: deploy:assets:compile
+  deploy:cache:clear: deploy:upload:build
   deploy:success: deploy:success:restart:php

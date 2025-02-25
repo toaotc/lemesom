@@ -1,4 +1,11 @@
 services:
+  node:
+    image: node:22-alpine
+    volumes:
+      - ./:/app
+    working_dir: /app
+    command: sh -c "yarn && yarn watch"
+
   php:
     image: ${IMAGES_PREFIX:-}app-php
     restart: unless-stopped

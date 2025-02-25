@@ -33,6 +33,14 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist
 
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+          cache: npm
+      - run: yarn
+      - run: yarn build
+
       - name: Deploy
         uses: deployphp/action@v1
         with:
