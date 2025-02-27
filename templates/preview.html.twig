@@ -1,7 +1,24 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="h-screen flex items-center justify-center">
-        <img src="{{ asset('build/images/lemesom.png') }}" alt="Lemesom logo" class="bg-slate-300 border border-t-2 border-slate-300"/>
+    <div class="hero min-h-screen bg-[url('//picsum.photos/1024/768?blur=5')] bg-fixed bg-center bg-cover">
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-center">
+            <div class="card sm:w-96 bg-base-100 border-base-100">
+                <div class="card-body">
+                    <h1 class="text-secondary text-3xl sm:text-5xl font-bold">LEMESOM</h1>
+                    <p class="text-primary">Lend As Friend.</p>
+                    <div class="mt-5 join mx-auto">
+                        {% for name, color in {
+                            'Share': 'badge-secondary',
+                            'Borrow': 'badge-primary',
+                            'Lend': 'badge-secondary',
+                        } %}
+                        <div class="join-item badge badge-dash {{ color }}">{{ name }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}

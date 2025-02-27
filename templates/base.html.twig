@@ -12,7 +12,15 @@
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
+    <body class="bg-base-200">
+        <nav class="navbar bg-base-100 shadow-sm fixed top-0">
+            <div class="navbar-start">
+            </div>
+            <div class="navbar-center">
+                <a class="btn btn-ghost text-xl text-secondary">LEMESOM</a>
+            </div>
+            <div class="navbar-end"></div>
+        </nav>
         {% block body %}{% endblock %}
     </body>
 </html>
