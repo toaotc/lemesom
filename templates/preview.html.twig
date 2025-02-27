@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="hero min-h-screen bg-[url('//picsum.photos/1280/720')] bg-fixed bg-center bg-cover">
-        <div class="hero-overlay backdrop-blur-sm mt-32"></div>
+    <div class="hero min-h-[calc(100vh-64px)] bg-[url('//picsum.photos/1280/720')] bg-fixed bg-center bg-cover">
+        <div class="hero-overlay backdrop-blur-sm"></div>
         <div class="hero-content text-center">
             <div {{ svelte_component('Hello', intro = true) }}></div>
         </div>

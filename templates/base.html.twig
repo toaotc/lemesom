@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         {% block stylesheets %}
@@ -13,14 +14,18 @@
         {% endblock %}
     </head>
     <body class="bg-base-200">
-        <nav class="navbar bg-base-100 shadow-sm fixed top-0">
-            <div class="navbar-start">
-            </div>
-            <div class="navbar-center">
-                <a class="btn btn-ghost text-xl text-secondary">LEMESOM</a>
-            </div>
-            <div class="navbar-end"></div>
-        </nav>
-        {% block body %}{% endblock %}
+    <header class="sticky top-0 z-50 bg-base-100 shadow-sm">
+        <div class="container mx-auto">
+            <nav class="navbar">
+                <div class="navbar-start">
+                </div>
+                <div class="navbar-center">
+                    <span class="text-xl text-secondary font-semibold">LEMESOM</span>
+                </div>
+                <div class="navbar-end"></div>
+            </nav>
+        </div>
+    </header>
+    {% block body %}{% endblock %}
     </body>
 </html>
