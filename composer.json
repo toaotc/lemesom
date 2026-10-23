@@ -22,10 +22,10 @@
         "symfony/twig-bundle": "7.4.*",
         "symfony/ux-svelte": "^2.36",
         "symfony/ux-turbo": "^2.36",
-        "symfony/webpack-encore-bundle": "^2.4.1",
+        "symfony/webpack-encore-bundle": "^2.4.2",
         "symfony/yaml": "7.4.*",
-        "twig/extra-bundle": "^2.12|^3.24",
-        "twig/twig": "^2.12|^3.28"
+        "twig/extra-bundle": "^2.12|^3.29",
+        "twig/twig": "^2.12|^3.30"
     },
     "config": {
         "allow-plugins": {
@@ -81,7 +81,7 @@
     "require-dev": {
         "deployer/deployer": "^7.5.12",
         "symfony/debug-bundle": "7.4.*",
-        "symfony/maker-bundle": "^1.67.0",
+        "symfony/maker-bundle": "^1.68.0",
         "symfony/stopwatch": "7.4.*",
         "symfony/web-profiler-bundle": "7.4.*"
     }
